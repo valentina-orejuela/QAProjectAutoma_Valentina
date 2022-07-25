@@ -1,0 +1,1 @@
+# QAProjectAutoma_Valentina
