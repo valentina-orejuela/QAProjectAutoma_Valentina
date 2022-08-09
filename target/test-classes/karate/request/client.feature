@@ -4,4 +4,10 @@ Feature: Service client Get
   To validate to status code and response
 
   Background: consume service
-    * url 'https://reqres.in/api/users/2'
+    * url url
+
+    Scenario: Check the service get method
+
+      Given path 'users', '2'
+      When method get
+      Then status 200
