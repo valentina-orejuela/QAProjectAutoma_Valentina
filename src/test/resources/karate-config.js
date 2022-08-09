@@ -5,5 +5,5 @@ if(!env){
 env = 'dev';
 }
 var config = properties[env]
-return config ;
+return config;
 }
