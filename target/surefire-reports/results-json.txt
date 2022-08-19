@@ -1,1 +1,0 @@
-{"features":2,"ignored":0,"efficiency":0.7419973852040816,"failures":{"karate.request.create":"create.feature:17 - assert evaluated to false: responsePost.id > 10"},"totalTime":2326.9038,"threads":1,"scenarios":2,"failed":1,"passed":1,"version":"0.9.6","elapsedTime":3136.0}
