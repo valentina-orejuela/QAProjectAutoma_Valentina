@@ -1,0 +1,17 @@
+<testsuite failures="1" name="karate/request/create.feature" skipped="0" tests="1" time="0.451916">
+  <testcase classname="karate.request.create" name="check the service POST method" time="0.451916">
+    <failure message="create.feature:17 - assert evaluated to false: responsePost.id &gt; 10">* url url ................................................................. passed
+* def requestCreate = {"name": "#(name)", "job": "#(job)"} ................ passed
+* def responsePost = read('classpath:karate/request/ResponsePost.json') ... passed
+Given path 'users' ........................................................ passed
+And request requestCreate ................................................. passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response == responsePost ........................................ passed
+And assert responsePost.id &gt; 10 ........................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: create.feature:17 - assert evaluated to false: responsePost.id &gt; 10&#13;
+	at ✽.And assert responsePost.id &gt; 10 (create.feature:17)</failure>
+  </testcase>
+</testsuite>
