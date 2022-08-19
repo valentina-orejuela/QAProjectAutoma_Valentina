@@ -10,7 +10,7 @@ Feature:
       * def requestCreate = {"name": "#(name)", "job": "#(job)"}
       * def responsePost = read('classpath:karate/request/ResponsePost.json')
       Given path 'users'
-      And request requestCreate
+      And request  requestCreate
       When method POST
       Then status 201
       And  match response == responsePost
