@@ -18,8 +18,11 @@
 *.zip
 *.tar.gz
 *.rar
+<<<<<<< HEAD
 *.idea
 target/
+=======
+>>>>>>> 15f2474eb60902dbea35201c0225c502d7379e13
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
