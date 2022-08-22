@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>karate.request.addPets</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">1</div>
+            
+<div class="bg-danger" id="nav-fail">2</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2022-08-21 11:48:05 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:9]">[1:9] Check the service POST method </a>
+</div>
+<div class="nav-item failed">
+<a href="#[2.1:32]">[2.1:32] POST a pet with invalid values an id in the url </a>
+</div>
+<div class="nav-item failed">
+<a href="#[2.2:33]">[2.2:33] POST a pet with invalid values an id in the url </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">karate/request/addPets.feature</span><span class="feature-description">Service client POST | As AQ Automation&#13;
+  I want to add a pet&#13;
+  To validate the status code and response</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:9]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:9]</span><span class="scenario-name">Check the service POST method </span>
+</div>
+<div class="scenario-time passed">ms: 2073</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:9]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* url "https://petstore.swagger.io/v2/"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="1">23:48:03.076 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">* def requestCreate = read('classpath:karate/request/requestPost.json')</div>
+</div>
+<div class="time-cell passed">97</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">* def responseError = read('classpath:karate/request/responsePost.json')</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">Given path 'pet'</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">And request requestCreate</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">1967</div>
+</div>
+<div class="preformatted" data-parent="6">23:48:04.513 request:
+1 &gt; POST https://petstore.swagger.io/v2/pet
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 162
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: petstore.swagger.io
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_333)
+{"id":1,"category":{"id":1,"name":"Customer Security Executive"},"name":"Verla","photoUrls":["string"],"tags":[{"id":0,"name":"Cremin - Rempel"}],"status":"sold"}
+
+23:48:05.147 response time in milliseconds: 632,94
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json
+1 &lt; Date: Mon, 22 Aug 2022 04:48:04 GMT
+1 &lt; Server: Jetty(9.2.9.v20150224)
+1 &lt; Transfer-Encoding: chunked
+{"id":1,"category":{"id":1,"name":"Customer Security Executive"},"name":"Verla","photoUrls":["string"],"tags":[{"id":0,"name":"Cremin - Rempel"}],"status":"sold"}</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2.1:32]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [2.1:32]</span><span class="scenario-name">POST a pet with invalid values an id in the url </span>
+</div>
+<div class="scenario-time failed">ms: 8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[2.1:32]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[2.1:32]bg">
+<div class="step-container" id="8">
+<div class="step-ref bg-step">8</div>
+<div class="step-cell passed">* url "https://petstore.swagger.io/v2/"</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="8">23:48:05.166 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">* def idPet = '8787877'</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref failed">10</div>
+<div class="step-cell failed">* def responseError = read('classpath:karate/request/responseErrorPost.json')</div>
+</div>
+<div class="time-cell failed">4</div>
+</div>
+<div class="preformatted" data-parent="10">addPets.feature:21 - could not find or read file: classpath:karate/request/responseErrorPost.json</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref skipped">11</div>
+<div class="step-cell skipped">* def requestCreate = read('karate/request/requestErrorPost.json')</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref skipped">12</div>
+<div class="step-cell skipped">Given path 'pet'</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref skipped">13</div>
+<div class="step-cell skipped">And request requestCreate</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref skipped">14</div>
+<div class="step-cell skipped">When method POST</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref skipped">15</div>
+<div class="step-cell skipped">Then status 400</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref skipped">16</div>
+<div class="step-cell skipped">And match response == responseError</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2.2:33]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [2.2:33]</span><span class="scenario-name">POST a pet with invalid values an id in the url </span>
+</div>
+<div class="scenario-time failed">ms: 3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[2.2:33]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[2.2:33]bg">
+<div class="step-container" id="17">
+<div class="step-ref bg-step">17</div>
+<div class="step-cell passed">* url "https://petstore.swagger.io/v2/"</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="17">23:48:05.191 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref passed">18</div>
+<div class="step-cell passed">* def idPet = 'uno'</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="19">
+<div class="step-ref failed">19</div>
+<div class="step-cell failed">* def responseError = read('classpath:karate/request/responseErrorPost.json')</div>
+</div>
+<div class="time-cell failed">1</div>
+</div>
+<div class="preformatted" data-parent="19">addPets.feature:21 - could not find or read file: classpath:karate/request/responseErrorPost.json</div>
+<div class="step-row">
+<div class="step-container" id="20">
+<div class="step-ref skipped">20</div>
+<div class="step-cell skipped">* def requestCreate = read('karate/request/requestErrorPost.json')</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="21">
+<div class="step-ref skipped">21</div>
+<div class="step-cell skipped">Given path 'pet'</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="22">
+<div class="step-ref skipped">22</div>
+<div class="step-cell skipped">And request requestCreate</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="23">
+<div class="step-ref skipped">23</div>
+<div class="step-cell skipped">When method POST</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="24">
+<div class="step-ref skipped">24</div>
+<div class="step-cell skipped">Then status 400</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="25">
+<div class="step-ref skipped">25</div>
+<div class="step-cell skipped">And match response == responseError</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

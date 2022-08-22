@@ -1,0 +1,25 @@
+23:48:03.076 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+23:48:04.513 request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 162
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_333)
+{"id":1,"category":{"id":1,"name":"Customer Security Executive"},"name":"Verla","photoUrls":["string"],"tags":[{"id":0,"name":"Cremin - Rempel"}],"status":"sold"}
+
+23:48:05.147 response time in milliseconds: 632,94
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 22 Aug 2022 04:48:04 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"id":1,"category":{"id":1,"name":"Customer Security Executive"},"name":"Verla","photoUrls":["string"],"tags":[{"id":0,"name":"Cremin - Rempel"}],"status":"sold"}
+
+23:48:05.166 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+23:48:05.191 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
