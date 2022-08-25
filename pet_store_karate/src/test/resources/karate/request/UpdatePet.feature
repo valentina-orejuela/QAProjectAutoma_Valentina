@@ -7,10 +7,9 @@ Feature: Service client PUT
     * url "https://petstore.swagger.io/v2/"
 
   Scenario: Check the service PUT method
-    * def requestCreate = read('classpath:karate/request/requestPost.json')
-    * def responseError = read('classpath:karate/request/responsePost.json')
+    * def requestCreate = read('classpath:karate/request/requestPUT.json')
 
-    Given path 'pet', '1'
+    Given path 'pet'
     And request requestCreate
     When method PUT
     Then status 200
@@ -18,16 +17,16 @@ Feature: Service client PUT
 
   Scenario Outline: PUT a pet with invalid values an id in the url
     * def idPet = '<id>'
-    * def responseError = read('classpath:karate/request/responseError.json')
-    * def requestCreate = read('classpath:karate/request/requestPost.json')
+    * def responseError = read('classpath:karate/request/responseErrorPut.json')
+    * def requestCreate = read('classpath:karate/request/requestErrorPut.json')
 
-    Given path 'pet', idPet
+    Given path 'pet'
     And request requestCreate
     When method PUT
-    Then status 400
+    Then status 500
     And match response == responseError
 
     Examples:
       | id |
-      |8787878|
-      |Uno|
+      |///|
+      |***|

@@ -18,16 +18,16 @@ Feature: Service client POST
 
   Scenario Outline: POST a pet with invalid values an id in the url
     * def idPet = '<id>'
-    * def responseError = read('classpath:karate/request/responseError.json')
-    * def requestCreate = read('classpath:karate/request/requestError.json')
+    * def responseError = read('classpath:karate/request/responseErrorPost.json')
+    * def requestCreate = read('karate/request/requestErrorPost.json')
 
     Given path 'pet'
     And request requestCreate
     When method POST
-    Then status 500
+    Then status 400
     And match response == responseError
 
     Examples:
       | id |
-      |***|
-      |//|
+      |8787877|
+      |uno|

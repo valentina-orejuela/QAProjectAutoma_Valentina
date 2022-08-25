@@ -5,11 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-<<<<<<< HEAD
-    <artifactId>petstore</artifactId>
-=======
     <artifactId>request</artifactId>
->>>>>>> 72ce018b6e7123c8c8700d2ad772feb0850fd321
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -70,8 +66,4 @@
             </plugin>
         </plugins>
     </build>
-<<<<<<< HEAD
-
-=======
->>>>>>> 72ce018b6e7123c8c8700d2ad772feb0850fd321
 </project>

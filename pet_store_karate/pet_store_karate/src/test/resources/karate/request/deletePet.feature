@@ -14,7 +14,7 @@ Feature: Service client DELETE
 
   Scenario Outline: DELETE a pet with invalid values an id in the url
     * def idPet = '<id>'
-    * def responseError = read('classpath:karate/request/resposeErrorDelete.json')
+    * def responseError = read('classpath:karate/request/responseDelete.json')
 
     Given path 'pet', idPet
     When method DELETE
@@ -23,4 +23,5 @@ Feature: Service client DELETE
 
     Examples:
       | id |
-      |***|
+      |9876543211|
+      | numeroUno |
