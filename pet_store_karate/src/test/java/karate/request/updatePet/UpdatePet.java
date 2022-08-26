@@ -1,4 +1,4 @@
-package karate.request;
+package karate.request.updatePet;
 
 import com.intuit.karate.junit5.Karate;
 
