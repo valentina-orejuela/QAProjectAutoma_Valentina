@@ -1,0 +1,11 @@
+package karate.request.deletePet;
+
+import com.intuit.karate.junit5.Karate;
+
+public class deletePet {
+    @Karate.Test
+    Karate testSample(){
+        return Karate.run("classpath:karate/request/deletePet/deletePet.feature").relativeTo(getClass());
+    }
+
+}
